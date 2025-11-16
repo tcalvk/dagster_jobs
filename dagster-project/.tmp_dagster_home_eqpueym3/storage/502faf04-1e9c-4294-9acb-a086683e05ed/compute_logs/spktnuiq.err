@@ -1,0 +1,7 @@
+[32m2025-11-15 22:48:38 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 502faf04-1e9c-4294-9acb-a086683e05ed - 1692 - LOGS_CAPTURED - Started capturing logs in process (pid: 1692).
+[32m2025-11-15 22:48:38 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 502faf04-1e9c-4294-9acb-a086683e05ed - 1692 - get_jobs - STEP_START - Started execution of step "get_jobs".
+[32m2025-11-15 22:49:00 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 502faf04-1e9c-4294-9acb-a086683e05ed - 1692 - get_jobs - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-11-15 22:49:00 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 502faf04-1e9c-4294-9acb-a086683e05ed - get_jobs - Writing file at: /Users/tannerklein/Library/Mobile Documents/com~apple~CloudDocs/Projects/dagster_jobs/dagster-project/.tmp_dagster_home_eqpueym3/storage/get_jobs using PickledObjectFilesystemIOManager...
+[32m2025-11-15 22:49:00 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 502faf04-1e9c-4294-9acb-a086683e05ed - 1692 - get_jobs - ASSET_MATERIALIZATION - Materialized value get_jobs.
+[32m2025-11-15 22:49:00 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 502faf04-1e9c-4294-9acb-a086683e05ed - 1692 - get_jobs - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-11-15 22:49:00 -0700[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 502faf04-1e9c-4294-9acb-a086683e05ed - 1692 - get_jobs - STEP_SUCCESS - Finished execution of step "get_jobs" in 22.4s.
