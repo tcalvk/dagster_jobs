@@ -2,6 +2,8 @@ version: "3.9"
 
 services:
   dagster-webserver:
+    env_file:
+      - .env
     build: .
     container_name: dagster-webserver
     command: dagster-webserver -h 0.0.0.0 -p 3000 -w workspace.yaml
@@ -11,8 +13,11 @@ services:
       - "3000:3000"
     volumes:
       - dagster_home:/opt/dagster/dagster_home
+      - ./keys:/opt/creds:ro
 
   dagster-daemon:
+    env_file: 
+      - .env
     build: .
     container_name: dagster-daemon
     command: dagster-daemon run -w workspace.yaml
@@ -22,6 +27,7 @@ services:
       - dagster-webserver
     volumes:
       - dagster_home:/opt/dagster/dagster_home
+      - ./keys:/opt/creds:ro
 
 volumes:
   dagster_home:

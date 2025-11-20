@@ -115,3 +115,9 @@ def get_jobs():
     load_result = {"inserted_rows": len(rows), "table": table_id}
     print(load_result)
     return load_result
+
+daily_schedule = dg.ScheduleDefinition(
+    name="daily_refresh",
+    cron_schedule="0 6 * * *",  # Runs at 6:00 daily
+    target=[get_jobs],
+)
