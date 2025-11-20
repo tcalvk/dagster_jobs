@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  dagster-webserver:
+    build: .
+    container_name: dagster-webserver
+    command: dagster-webserver -h 0.0.0.0 -p 3000 -w workspace.yaml
+    environment:
+      DAGSTER_HOME: /opt/dagster/dagster_home
+    ports:
+      - "3000:3000"
+    volumes:
+      - dagster_home:/opt/dagster/dagster_home
+
+  dagster-daemon:
+    build: .
+    container_name: dagster-daemon
+    command: dagster-daemon run -w workspace.yaml
+    environment:
+      DAGSTER_HOME: /opt/dagster/dagster_home
+    depends_on:
+      - dagster-webserver
+    volumes:
+      - dagster_home:/opt/dagster/dagster_home
+
+volumes:
+  dagster_home:

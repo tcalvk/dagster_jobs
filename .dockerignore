@@ -1,0 +1,9 @@
+**/.venv
+**/__pycache__
+**/*.pyc
+.git
+tests
+uv.lock
+.env
+keys/
+.tmp_dagster_home_*
